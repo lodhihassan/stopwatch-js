@@ -2,52 +2,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stopwatch.css" />
     <title>STOP WATCH</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div>
-            <h1 class="heading">SIRAJ's Stop Watch</h1>
+    <div class="main">
+        <div class="count">
+            <h1 id="min">00</h1>
+            <h1 id="sec">00</h1>
+            <h1 id="msec">00</h1>
         </div>
-        <div class="container">
-            <div class="main">
-                <p id="stopwatch" class="digit">00 : 00 : 00</p>
-            </div>
-            <div>
-                <ul id="button">
-                    <li>
-                        <button class="btn" onclick="start()">Start</button>
-                    </li>
-                    <li>
-                        <button class="btn" onclick="stop()">Stop</button>
-                    </li>
-                    <li>
-                        <button class="btn1" onclick="pause()">Pause</button>
-                    </li>
-                    <li>
-                        <button class="btn2" onclick="restart()">Reset</button>
-                    </li>
-                    <li>
-                        <button class="btn3" onclick="resetlap()">Resetlap</button>
-                    </li>
-                    <li>
-                        <button class="btn4" onclick="lap()">Lap</button>
-
-                    </li>
-                    <li>
-                        <ul id="laps"></ul>
-                    </li>
-
-                </ul>
-            </div>
+        <div class="btn">
+            <button id="start" onclick="start()">START</button>
+            <button id="stop" onclick="stop()">PAUSE</button>
+            <button id="clear" onclick="cler()">CLEAR</button>
+            <!-- <button id="lap" onclick="lap()">LAP</button>
+      <button id="clearlap" onclick="resetlap()">CLEAR LAP</button> -->
         </div>
+        <div id="additem">
+            <ol id="list"></ol>
+        </div>
+
     </div>
 </body>
-<script src="app.js"></script>
+<script src="stopwatch.js"></script>
 
 </html>
